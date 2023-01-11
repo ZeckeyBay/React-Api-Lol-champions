@@ -13,9 +13,9 @@ useEffect(()=>{
     fetchChampions()
 },[])
   return (
-    Object.keys(champions).map((x)=>(
+    Object.keys(champions).map((x,idx)=>(
         <div>
-            <h1>{x}</h1>
+            <h1><SingleChampion/>{x}</h1>
         </div>
     ))
     

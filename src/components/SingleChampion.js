@@ -2,7 +2,9 @@ import React from 'react'
 
 const SingleChampion = ({champion}) => {
   return (
-    <div>{champion}</div>
+    <div>
+    <h1>{champion}</h1>
+    </div>
   )
 }
 

@@ -1,24 +1,29 @@
-import React from 'react'
-import { useState,useEffect } from 'react'
-import axios from 'axios'
-import SingleChampion from './SingleChampion'
+import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import SingleChampion from "./SingleChampion";
 
 const ChampionList = () => {
-    const [champions,setChampions] = useState({})
-const fetchChampions = async() =>{
-    const response = await axios.get('http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion.json')
-    setChampions(response.data.data)
-}
-useEffect(()=>{
-    fetchChampions()
-},[])
+  const [value, setValue] = useState([]);
+  const fetchChampions = async () => {
+    const response = await axios.get(
+      "http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion.json"
+    );
+    const data = response.data.data;
+    setValue(Object.values(data));
+  };
+  useEffect(() => {
+    fetchChampions();
+  }, []);
   return (
-    Object.keys(champions).map((x,idx)=>(
-        <div>
-            <h1><SingleChampion/>{x}</h1>
-        </div>
-    ))
-    
-)}
+    <div className="champion-list">
+    <ul>
+      {value.map((champion,idx) => (
+        <li><SingleChampion champion={champion} key={idx}/></li>
+      ))}
+    </ul>
+    </div>
+  );
+};
 
-export default ChampionList
+export default ChampionList;

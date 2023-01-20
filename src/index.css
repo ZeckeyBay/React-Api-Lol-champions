@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(126, 120, 112);
+    color: white;
+    height: 60px;
+    font-size: 2rem;
+}
+
+.champion-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.champion-list ul li{
+    list-style: none;
+}
+
+.single-champ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: orange;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.champ-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.champ-tags{
+    padding: 10px 0px;
+}
+
+.champ-container{
+    padding: 10px 0px;
+}

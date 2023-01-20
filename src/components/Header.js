@@ -2,8 +2,8 @@ import React from "react";
 
 const Header = ()=>{
     return(
-        <header>
-            <h1>Players</h1>
+        <header className="champs-header">
+            <h1>Champions</h1>
         </header>
     )
 }

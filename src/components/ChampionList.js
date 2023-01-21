@@ -8,7 +8,7 @@ const ChampionList = () => {
   const [value, setValue] = useState([]);
   const fetchChampions = async () => {
     const response = await axios.get(
-      "http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion.json"
+      "https://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion.json"
     );
     const data = response.data.data;
     setValue(Object.values(data));

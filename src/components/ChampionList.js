@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SingleChampion from "./SingleChampion";
+import SearchBar from "./SearchBar";
 
 const ChampionList = () => {
   const [value, setValue] = useState([]);
@@ -22,6 +23,7 @@ const ChampionList = () => {
         <li><SingleChampion champion={champion} key={idx}/></li>
       ))}
     </ul>
+      <SearchBar value={value}/>
     </div>
   );
 };

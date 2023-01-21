@@ -12,9 +12,9 @@ const SingleChampion = ({champion}) => {
             Title : {champion.title}
           </p>
           <p className='champ-tags'>
-          Champion Type : {champion.tags[0]}
+            Champion Type : {champion.tags[0]}
           </p>
-          <p>
+          <p className='party-type'>
             Party Type : {champion.partype}
           </p>
         </div>       

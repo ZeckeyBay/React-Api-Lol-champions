@@ -23,7 +23,7 @@ const ChampionList = () => {
         <li><SingleChampion champion={champion} key={idx}/></li>
       ))}
     </ul>
-      <SearchBar value={value}/>
+      <SearchBar />
     </div>
   );
 };
